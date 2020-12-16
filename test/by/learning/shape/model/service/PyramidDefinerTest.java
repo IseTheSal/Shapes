@@ -1,11 +1,5 @@
 package by.learning.shape.model.service;
 
-import by.learning.shape.model.entity.ParallelType;
-import by.learning.shape.model.entity.Point;
-import by.learning.shape.model.entity.Pyramid;
-import by.learning.shape.model.entity.Square;
-import org.testng.annotations.Test;
-
 public class PyramidDefinerTest {
 
 //    @Test
