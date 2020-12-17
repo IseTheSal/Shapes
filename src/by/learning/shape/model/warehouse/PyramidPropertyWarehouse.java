@@ -15,19 +15,19 @@ public class PyramidPropertyWarehouse {
         return warehouse;
     }
 
-    public int findSize() {
+    public int size() {
         return pyramidProperty.size();
     }
 
-    public PyramidProperty getProperty(Long id) {
+    public PyramidProperty get(Long id) {
         return pyramidProperty.get(id);
     }
 
-    public void putProperty(Long id, PyramidProperty property) {
+    public void put(Long id, PyramidProperty property) {
         pyramidProperty.put(id, property);
     }
 
-    public void removeProperty(Long id) {
+    public void remove(Long id) {
         pyramidProperty.remove(id);
     }
 
