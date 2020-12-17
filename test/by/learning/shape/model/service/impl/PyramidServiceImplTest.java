@@ -2,8 +2,8 @@ package by.learning.shape.model.service.impl;
 
 import by.learning.shape.exception.ServiceException;
 import by.learning.shape.model.entity.Point;
-import by.learning.shape.model.entity.pyramid.Pyramid;
 import by.learning.shape.model.entity.Square;
+import by.learning.shape.model.entity.pyramid.Pyramid;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;

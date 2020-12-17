@@ -1,7 +1,7 @@
 package by.learning.shape.validator;
 
-import by.learning.shape.model.entity.pyramid.ParallelType;
 import by.learning.shape.model.entity.Point;
+import by.learning.shape.model.entity.pyramid.ParallelType;
 import by.learning.shape.model.service.PyramidDefinerService;
 import by.learning.shape.model.service.impl.PyramidServiceImpl;
 import org.apache.logging.log4j.LogManager;
