@@ -18,7 +18,7 @@ public class VolumeSpecification implements Specification {
     @Override
     public boolean specify(Pyramid pyramid) {
         long id = pyramid.getId();
-        double volume = PyramidPropertyWarehouse.getWarehouse().getProperty(id).getVolume();
+        double volume = PyramidPropertyWarehouse.getWarehouse().get(id).getVolume();
         return (from >= volume && volume <= to);
     }
 }

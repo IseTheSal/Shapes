@@ -17,7 +17,7 @@ public class BaseAreaSpecification implements Specification {
     @Override
     public boolean specify(Pyramid pyramid) {
         long id = pyramid.getId();
-        double baseArea = PyramidPropertyWarehouse.getWarehouse().getProperty(id).getBaseArea();
+        double baseArea = PyramidPropertyWarehouse.getWarehouse().get(id).getBaseArea();
         return (from >= baseArea && baseArea <= to);
     }
 }

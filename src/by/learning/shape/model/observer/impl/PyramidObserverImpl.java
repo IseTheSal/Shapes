@@ -33,7 +33,7 @@ public class PyramidObserverImpl implements CustomObserver {
                 double pyramidVolume = pyramidService.calcPyramidVolume(pyramid);
                 double baseArea = pyramidService.calcBaseArea(pyramid);
                 PyramidProperty pyramidProperty = new PyramidProperty(pyramidVolume, baseArea);
-                PyramidPropertyWarehouse.getWarehouse().putProperty(pyramid.getId(), pyramidProperty);
+                PyramidPropertyWarehouse.getWarehouse().put(pyramid.getId(), pyramidProperty);
             } catch (ServiceException e) {
                 logger.info("Exception with service",e);
             }
