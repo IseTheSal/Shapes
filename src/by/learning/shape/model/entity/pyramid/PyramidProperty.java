@@ -4,7 +4,6 @@ public class PyramidProperty {
 
     private double volume;
     private double baseArea;
-    private ParallelType parallelType;
 
     public PyramidProperty(double volume, double baseArea) {
         this.volume = volume;
