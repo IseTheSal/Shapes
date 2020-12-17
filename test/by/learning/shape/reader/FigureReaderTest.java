@@ -1,4 +1,4 @@
-package by.learning.shape.model.reader;
+package by.learning.shape.reader;
 
 import by.learning.shape.exception.ReaderException;
 import org.testng.Assert;

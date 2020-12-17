@@ -2,7 +2,7 @@ package by.learning.shape.model.service;
 
 import by.learning.shape.exception.ServiceException;
 import by.learning.shape.model.entity.Point;
-import by.learning.shape.model.entity.Pyramid;
+import by.learning.shape.model.entity.pyramid.Pyramid;
 
 public interface PyramidService {
 

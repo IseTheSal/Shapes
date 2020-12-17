@@ -1,10 +1,21 @@
-package by.learning.shape.model.entity;
+package by.learning.shape.model.entity.pyramid;
 
 
-public class Pyramid extends Figure {
+import by.learning.shape.model.entity.Figure;
+import by.learning.shape.model.entity.Point;
+import by.learning.shape.model.entity.Square;
+import by.learning.shape.model.observer.CustomObserver;
+import by.learning.shape.model.observer.Observable;
+import by.learning.shape.model.observer.PyramidEvent;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class Pyramid extends Figure implements Observable {
 
     private Point height;
     private Square base;
+    private List<CustomObserver> observers = new ArrayList<>();
 
     public Pyramid(Point height, Square base) {
         this.height = height;
@@ -17,6 +28,7 @@ public class Pyramid extends Figure {
 
     public void setHeight(Point height) {
         this.height = height;
+        notifyObservers();
     }
 
     public Square getBase() {
@@ -25,6 +37,28 @@ public class Pyramid extends Figure {
 
     public void setBase(Square base) {
         this.base = base;
+        notifyObservers();
+    }
+
+
+    @Override
+    public void attach(CustomObserver observer) {
+        if (observer != null) {
+            observers.add(observer);
+        }
+    }
+
+    @Override
+    public void detach(CustomObserver observer) {
+        observers.remove(observer);
+    }
+
+    @Override
+    public void notifyObservers() {
+        PyramidEvent pyramidEvent = new PyramidEvent(this);
+        for (CustomObserver observer : observers) {
+            observer.parameterChanged(pyramidEvent);
+        }
     }
 
     @Override
@@ -55,4 +89,5 @@ public class Pyramid extends Figure {
         sb.append('}');
         return sb.toString();
     }
+
 }

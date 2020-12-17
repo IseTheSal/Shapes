@@ -1,7 +1,7 @@
 package by.learning.shape.validator;
 
 import by.learning.shape.model.entity.Point;
-import by.learning.shape.model.entity.Pyramid;
+import by.learning.shape.model.entity.pyramid.Pyramid;
 import by.learning.shape.model.entity.Square;
 import org.testng.Assert;
 import org.testng.annotations.AfterTest;
@@ -40,13 +40,13 @@ public class PyramidValidatorTest {
 
     @Test
     public void testIsHeightCorrect() {
-        boolean heightCorrect = pyramidValidator.isHeightCorrect(pyramid);
+        boolean heightCorrect = pyramidValidator.isHeightCorrect(point1, point2, point3, point4, height);
         Assert.assertTrue(heightCorrect);
     }
 
     @Test
     public void testIsPyramidParallelToAxis() {
-        boolean condition = pyramidValidator.isPyramidParallelToAxis(pyramid);
+        boolean condition = pyramidValidator.isPyramidParallelToAxis(point1, point2, point3, point4);
         Assert.assertTrue(condition);
     }
 
