@@ -3,10 +3,11 @@ package by.learning.shape.model.repository.specification.impl;
 import by.learning.shape.model.entity.pyramid.Pyramid;
 import by.learning.shape.model.repository.specification.Specification;
 
-public class IdSpecification implements Specification {
+public class IdSpecificationImpl implements Specification {
+
     private long id;
 
-    public IdSpecification(long id) {
+    public IdSpecificationImpl(long id) {
         this.id = id;
     }
 
