@@ -1,7 +1,7 @@
 package by.learning.shape.model.entity.pyramid;
 
 
-import by.learning.shape.model.entity.Figure;
+import by.learning.shape.model.entity.AbstractFigure;
 import by.learning.shape.model.entity.Point;
 import by.learning.shape.model.entity.Square;
 import by.learning.shape.model.observer.CustomObserver;
@@ -11,7 +11,7 @@ import by.learning.shape.model.observer.PyramidEvent;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Pyramid extends Figure implements Observable {
+public class Pyramid extends AbstractFigure implements Observable {
 
     private Point height;
     private Square base;

@@ -1,6 +1,6 @@
 package by.learning.shape.model.entity;
 
-public class Square extends Figure {
+public class Square extends AbstractFigure {
 
     private Point pointOne;
     private Point pointTwo;

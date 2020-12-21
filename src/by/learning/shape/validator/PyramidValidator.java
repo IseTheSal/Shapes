@@ -35,10 +35,13 @@ public class PyramidValidator {
     }
 
     public boolean isPointValid(String x, String y, String z) {
+        String checkX = String.valueOf(Double.parseDouble(x));
+        String checkY = String.valueOf(Double.parseDouble(y));
+        String checkZ = String.valueOf(Double.parseDouble(z));
         Pattern pattern = Pattern.compile(POINT_REGEX);
-        Matcher matcherX = pattern.matcher(x);
-        Matcher matcherY = pattern.matcher(y);
-        Matcher matcherZ = pattern.matcher(z);
+        Matcher matcherX = pattern.matcher(checkX);
+        Matcher matcherY = pattern.matcher(checkY);
+        Matcher matcherZ = pattern.matcher(checkZ);
         boolean result = (matcherX.matches() && matcherY.matches() && matcherZ.matches());
         return result;
     }
@@ -78,7 +81,7 @@ public class PyramidValidator {
 
     public boolean isPyramidParallelToAxis(Point point1, Point point2, Point point3, Point point4) {
         PyramidDefinerService pyramidDefiner = new PyramidDefinerService();
-        int value = pyramidDefiner.defineBaseParallel(point1, point2, point3, point4).getValue();
+        int value = pyramidDefiner.defineBaseParallel(point1, point2, point3, point4).ordinal();
         return value > 0;
     }
 

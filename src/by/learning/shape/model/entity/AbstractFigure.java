@@ -2,7 +2,7 @@ package by.learning.shape.model.entity;
 
 import by.learning.shape.util.generator.IdGenerator;
 
-public abstract class Figure {
+public abstract class AbstractFigure {
 
     private long id = IdGenerator.getFigureId();
     private String name;
@@ -24,7 +24,7 @@ public abstract class Figure {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
 
-        Figure figure = (Figure) o;
+        AbstractFigure figure = (AbstractFigure) o;
 
         if (id != figure.id) return false;
         return name != null ? name.equals(figure.name) : figure.name == null;

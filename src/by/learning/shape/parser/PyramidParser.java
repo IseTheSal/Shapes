@@ -13,7 +13,7 @@ public class PyramidParser {
 
     private final static String POINT_SPLIT_REGEX = ";";
     private final static String COORDINATES_SPLIT_REGEX = ", ";
-    private final static int VALUES_AMOUNT = 4;
+    private final static int VALUES_AMOUNT = 5;
     private final static int POINT_COORDINATE_AMOUNT = 3;
 
 
@@ -44,7 +44,6 @@ public class PyramidParser {
                 points.add(point);
                 i++;
             }
-
             if (isPointsValid) {
                 result = new ArrayList<>(points);
             }
